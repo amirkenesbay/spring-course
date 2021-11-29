@@ -5,14 +5,14 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("personBean")
+//@Component("personBean")
 public class Person {
 //    @Autowired
 //    @Qualifier("catBean")
     private Pet pet;
-//    @Value("${person.surname}")
+    @Value("${person.surname}")
     private String surname;
-//    @Value("${person.age}")
+    @Value("${person.age}")
     private int age;
 
 //    public Person(@Qualifier("catBean") Pet pet){

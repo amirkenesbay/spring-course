@@ -1,12 +1,10 @@
 package com.amir.spring;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
 //@ComponentScan("com.amir.spring")
+@PropertySource("classpath:myApp.properties")
 public class MyConfig {
     @Bean
     @Scope("prototype")
