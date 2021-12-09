@@ -45,7 +45,6 @@
       <version>1.9.8.RC3</version>
       <scope>runtime</scope>
     </dependency>
-
   </dependencies>
 
   <build>
