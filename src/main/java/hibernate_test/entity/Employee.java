@@ -1,15 +1,12 @@
 package hibernate_test.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "employees")
 public class Employee {
-
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
@@ -25,7 +22,7 @@ public class Employee {
     @Column(name = "salary")
     private int salary;
 
-    public Employee(){
+    public Employee() {
     }
 
     public Employee(String name, String surname, String department, int salary) {
