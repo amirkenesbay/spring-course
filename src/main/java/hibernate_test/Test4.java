@@ -7,7 +7,7 @@ import org.hibernate.cfg.Configuration;
 
 import java.io.File;
 
-public class Test1 {
+public class Test4 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure(new File("hibernate.cfg.xml"))
@@ -16,10 +16,11 @@ public class Test1 {
 
         try {
             Session session = factory.getCurrentSession();
-            Employee employee = new Employee("Alex", "John", "Sales" , 800);
             session.beginTransaction();
-            session.save(employee);
+            session.createQuery("update Employee set salary = 1000 " + "where name = 'Alex'").executeUpdate();
+
             session.getTransaction().commit();
+            System.out.println("Done");
         } finally {
             factory.close();
         }
