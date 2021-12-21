@@ -94,6 +94,4 @@ public class Employee {
     public void setEmpDetail(Detail empDetail) {
         this.empDetail = empDetail;
     }
-
-
 }
