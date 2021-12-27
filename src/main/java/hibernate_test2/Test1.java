@@ -1,7 +1,7 @@
-package hibernate_test3;
+package hibernate_test2;
 
-import hibernate_test3.entity.Passport;
-import hibernate_test3.entity.Person;
+import hibernate_test2.entity.Passport;
+import hibernate_test2.entity.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
