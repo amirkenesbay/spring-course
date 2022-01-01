@@ -1,4 +1,4 @@
-package hibernate_one_to_many_bi_test1.entity;
+package hibernate_one_to_many_uni_example1.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -16,16 +16,15 @@ public class Post {
     @Column(name = "title")
     private String title;
 
-    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.DETACH, CascadeType.REFRESH, CascadeType.MERGE},
-    mappedBy = "post")
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "post_id")
     private List<Comment> comments;
 
-    public void addCommentToPost(Comment comment){
+    public void addCommentToPost (Comment comment){
         if(comments == null){
             comments = new ArrayList<>();
         }
         comments.add(comment);
-        comment.setPost(this);
     }
 
     public Post() {

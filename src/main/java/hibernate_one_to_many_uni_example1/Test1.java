@@ -1,7 +1,7 @@
-package hibernate_one_to_many_bi_test1;
+package hibernate_one_to_many_uni_example1;
 
-import hibernate_one_to_many_bi_test1.entity.Comment;
-import hibernate_one_to_many_bi_test1.entity.Post;
+import hibernate_one_to_many_uni_example1.entity.Comment;
+import hibernate_one_to_many_uni_example1.entity.Post;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -18,8 +18,8 @@ public class Test1 {
                 .buildSessionFactory()){
 
 //            addCommentToPostInfo(factory);
-//            getCommentInfo(factory, 1);
-//            deleteComment(factory, 4);
+//            getCommentInfo(factory, 9);
+//            deleteComment(factory, 9);
 
             System.out.println("Done!");
         } finally {
@@ -44,7 +44,6 @@ public class Test1 {
         session.beginTransaction();
         Comment comment = session.get(Comment.class, id);
         System.out.println(comment);
-        System.out.println(comment.getPost());
         session.getTransaction().commit();
     }
 

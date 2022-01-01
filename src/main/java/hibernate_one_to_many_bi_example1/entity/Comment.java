@@ -1,4 +1,4 @@
-package hibernate_one_to_many_bi_test1.entity;
+package hibernate_one_to_many_bi_example1.entity;
 
 import javax.persistence.*;
 
