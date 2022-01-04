@@ -33,7 +33,7 @@ public class Test1 {
             session.save(role1);
 
             session.getTransaction().commit();
-            System.out.println("Done");
+            System.out.println("Done!");
         } finally {
             factory.close();
             session.close();
